@@ -1,0 +1,15 @@
+import pandas as pd
+
+# Load CSV
+history_df = pd.read_csv("history_quiz.csv")
+
+# Print column names
+print("📌 Columns in history_df:", history_df.columns)
+
+# Check if "accuracy" and "score" exist
+missing_columns = [col for col in ["accuracy", "score"] if col not in history_df.columns]
+
+if missing_columns:
+    print(f"⚠️ Missing columns: {missing_columns}")
+else:
+    print("✅ All required columns exist!")
