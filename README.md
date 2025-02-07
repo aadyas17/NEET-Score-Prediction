@@ -40,13 +40,6 @@ git clone https://github.com/aadyas17/NEET-Score-Prediction.git
 cd NEET-Score-Prediction
 ```
 
-### **2️⃣ Create a Virtual Environment (Optional but Recommended)**  
-```sh
-python -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
-```
-
 ### **3️⃣ Install Dependencies**  
 ```sh
 pip install -r requirements.txt
@@ -103,13 +96,6 @@ import requests
 response = requests.get("http://127.0.0.1:5000/recommendations")
 print(response.json())
 ```
-
----
-
-## **📽 Demo Video & Screenshots**  
-📌 **Demo Video** – `demo/demo_video.mp4`  
-📌 **Sample Insights Screenshot** – `demo/insights.png`  
-📌 **Prediction Output** – `demo/sample_output.png`  
 
 ## **📜 License**  
 This project is licensed under the **MIT License**.  
