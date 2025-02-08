@@ -11,28 +11,6 @@ This project predicts **NEET scores** based on students' historical quiz perform
 ✅ Provides **recommendations** based on weak topics.  
 ✅ Deploys a **Flask API** to serve predictions.  
 
-## **📂 Project Structure**  
-```
-NEET-Score-Prediction/
-│-- data/                      # Contains sample CSV files (if needed)
-│-- src/                        # Source code directory
-│   │-- fetch_data.py           # Fetches quiz data from APIs
-│   │-- process_data.py         # Cleans and analyzes quiz data
-│   │-- model.py                # Builds & trains ML model
-│   │-- recommendations.py      # Generates topic recommendations
-│   │-- api.py                  # Flask API for predictions
-│   │-- main.py                 # Runs the complete pipeline
-│-- notebooks/                  # Jupyter notebooks for EDA (if applicable)
-│-- README.md                   # Project documentation
-│-- requirements.txt             # Python dependencies
-│-- demo/                        # Screenshots & video demo files
-│   │-- insights.png
-│   │-- sample_output.png
-│   │-- demo_video.mp4
-```
-
----
-
 ## **⚙️ Setup Instructions**  
 ### **1️⃣ Clone the Repository**  
 ```sh
@@ -96,6 +74,9 @@ import requests
 response = requests.get("http://127.0.0.1:5000/recommendations")
 print(response.json())
 ```
+
+## **Screenshot** 
+![image](https://github.com/user-attachments/assets/c49d126c-7be3-43fb-86ba-fac5d614f4ac)
 
 ## **📜 License**  
 This project is licensed under the **MIT License**.  
