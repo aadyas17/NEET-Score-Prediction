@@ -11,70 +11,39 @@ This project predicts **NEET scores** based on students' historical quiz perform
 ✅ Provides **recommendations** based on weak topics.  
 ✅ Deploys a **Flask API** to serve predictions.  
 
-## **⚙️ Setup Instructions**  
-### **1️⃣ Clone the Repository**  
+## **⚙️ Setup**  
 ```sh
 git clone https://github.com/aadyas17/NEET-Score-Prediction.git
 cd NEET-Score-Prediction
-```
-
-### **3️⃣ Install Dependencies**  
-```sh
 pip install -r requirements.txt
-```
-
-### **4️⃣ Run the Full Pipeline**  
-```sh
 python main.py
 ```
+## **🛠 Methodology**  
+1️⃣ **Data Fetching** → `fetch_data.py` pulls quiz data from APIs (CSV format).  
+2️⃣ **Processing & Analysis** → `process_data.py` computes accuracy & difficulty.  
+3️⃣ **ML Model** → `model.py` trains a Linear Regression model for score prediction.  
+4️⃣ **Recommendations** → `recommendations.py` identifies weak topics.  
+5️⃣ **Flask API** → `api.py` serves predictions via REST API.  
 
-## **🛠 Approach & Methodology**  
+## **📊 Insights**  
+| Topic                     | Avg Score | Difficulty |
+|---------------------------|-----------|-----------|
+| Genetics & Evolution      | 10.0      | High      |
+| Human Physiology         | 12.0      | Medium    |
+| Ecology & Environment    | 15.0      | Easy      |
 
-### **🔹 Step 1: Data Fetching**  
-- Uses `fetch_data.py` to **pull quiz data** from API endpoints.  
-- Saves it in CSV files (`current_quiz.csv`, `history_quiz.csv`).  
+*💡 Focus more on "Genetics and Evolution"!*  
 
-### **🔹 Step 2: Data Processing & Analysis**  
-- `process_data.py` cleans and analyzes the data.  
-- Computes **accuracy**, **average score**, and **difficulty levels**.  
-
-### **🔹 Step 3: Machine Learning Model**  
-- `model.py` trains a **Linear Regression model** using `sklearn`.  
-- Predicts **NEET scores** based on accuracy and past scores.  
-
-### **🔹 Step 4: Generating Recommendations**  
-- `recommendations.py` identifies weak topics and suggests focus areas.  
-
-### **🔹 Step 5: Flask API Deployment**  
-- `api.py` provides a **REST API** for predicting NEET scores.  
-- Can be queried using `POST` requests.  
-
----
-
-## **📊 Insights & Visualizations**  
-| Topic                         | Avg Score | Difficulty Level |
-|--------------------------------|-----------|-----------------|
-| **Genetics and Evolution**     | 10.0      | High           |
-| **Human Physiology**           | 12.0      | Medium         |
-| **Ecology and Environment**    | 15.0      | Easy           |
-| **Structural Organisation**    | 15.5      | Easy           |
-
-*💡 Based on analysis, "Genetics and Evolution" needs more focus!*  
-
----
-
-## **🚀 Running the Flask API**  
-### **1️⃣ Start the API Server**  
+## **🚀 Running API**  
 ```sh
 python api.py
 ```
-### **2️⃣ Make a Prediction Request (Example)**  
+**Example Request:**  
 ```python
 import requests
 response = requests.get("http://127.0.0.1:5000/recommendations")
 print(response.json())
-```
-
+```  
 ## **Screenshot** 
 ![image](https://github.com/user-attachments/assets/c49d126c-7be3-43fb-86ba-fac5d614f4ac)
 
