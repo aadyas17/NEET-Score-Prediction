@@ -5,7 +5,7 @@
 This project predicts **NEET scores** based on students' past quiz performances. It fetches quiz data from APIs, processes and analyzes trends, and provides recommendations to improve weak topics. The model leverages **Linear Regression** to estimate scores based on accuracy and quiz history.  
 
 ### **🔹 Features**  
-✅ Fetches **current & historical** quiz data via APIs.  
+✅ Fetches **current & historical** quiz data through APIs.  
 ✅ Cleans, processes, and analyzes quiz performance.  
 ✅ Trains a **Linear Regression model** for score prediction.  
 ✅ Identifies weak topics and **provides recommendations**.  
